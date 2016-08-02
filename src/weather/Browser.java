@@ -25,11 +25,11 @@ public class Browser {
         while ((inputLine = in.readLine()) != null) {
             //System.out.println(inputLine);
             
-            //Pulls the frocast from the websites HTML
+            //Pulls the forcast from the websites HTML
             if (inputLine.contains("<span class=\"phrase\">")) {
                 String[] split = inputLine.split("<span class=\"phrase\">");
                 forcast = split[1].split("</span></span>")[0];
-                replaced = forcast.replace("&deg;", " Â°").replace(". ", "\n");
+                replaced = forcast.replace("&deg;", " °").replace(". ", "\n");
             }
         }
         
